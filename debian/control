@@ -1,0 +1,30 @@
+Source: libcrypt-des-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Damyan Ivanov <dmn@debian.org>,
+           Roland Rosenfeld <roland@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               libcrypt-cbc-perl <!nocheck>,
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libcrypt-des-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libcrypt-des-perl.git
+Homepage: https://metacpan.org/release/Crypt-DES
+Rules-Requires-Root: no
+
+Package: libcrypt-des-perl
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Description: Perl DES encryption module
+ This is Crypt::DES, an XS-based implementation of the DES
+ cryptography algorithm.
+ .
+ The module implements the Crypt::CBC interface, which has
+ blocksize, keysize, encrypt and decrypt functions.

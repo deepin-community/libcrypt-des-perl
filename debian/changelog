@@ -1,0 +1,166 @@
+libcrypt-des-perl (2.07-4) unstable; urgency=medium
+
+  [ Roland Rosenfeld ]
+  * Declare Rules-Requires-Root: no.
+  * Fix lintian-override typo.
+  * Drop no longer supported add-log-mailing-address setting from
+    debian/changelog.
+  * Update debhelper to v13.
+  * Update to Standards-Version 4.6.0 (no changes).
+  * Add Forwarded tag to 01_declaration.patch.
+  * Change Build-Depends libcrypt-cbc-perl to <!nocheck> for crossbuild.
+
+  [ gregor herrmann ]
+  * debian/control: update Build-Depends for cross builds.
+  * debian/watch: use uscan version 4.
+
+ -- Roland Rosenfeld <roland@debian.org>  Wed, 01 Sep 2021 17:45:07 +0200
+
+libcrypt-des-perl (2.07-3) unstable; urgency=medium
+
+  * Update Standards-Version to 4.4.0 (no changes).
+  * Set Multi-Arch: same.
+  * 01_declaration.patch: Declare functions to avoid warnings.
+
+ -- Roland Rosenfeld <roland@debian.org>  Thu, 11 Jul 2019 08:25:07 +0200
+
+libcrypt-des-perl (2.07-2) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Jaldhar H. Vyas from Uploaders. Thanks for your work!
+
+  [ Alex Muntada ]
+  * Remove inactive pkg-perl members from Uploaders.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Roland Rosenfeld ]
+  * Build-depend on debhelper-compat (= 12) instead of using d/compat.
+  * Update Standards-Version to 4.3.0 (no changes).
+  * Use DEB_BUILD_MAINT_OPTIONS = hardening=+all
+  * Lintian override about full name of GPL in copyright.
+  * Add myself to uploaders.
+  * Activate salsa-ci pipeline.
+
+ -- Roland Rosenfeld <roland@debian.org>  Sun, 16 Jun 2019 13:20:11 +0200
+
+libcrypt-des-perl (2.07-1) unstable; urgency=low
+
+  * Team upload.
+  * Imported Upstream version 2.07
+  * Drop svupgrade.patch patch
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 09 Aug 2013 20:26:24 +0200
+
+libcrypt-des-perl (2.05-3) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Added: ${misc:Depends} to Depends: field.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * Email change: gregor herrmann -> gregoa@debian.org
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Switch to "3.0 (quilt)" source format.
+  * Use tiny debian/rules with dh(1), debhelper 9.20120312 and compat 9.
+  * debian/copyright: switch formatting to Copyright-Format 1.0.
+    Update years of packaging copyright.
+  * Add svupgrade.patch, taken from CPAN RT. (Closes: #708468)
+  * Set Standards-Version to 3.9.4 (no changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 17 May 2013 21:10:27 +0200
+
+libcrypt-des-perl (2.05-2) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields.
+  * debian/watched is fixed since quite some time in svn (closes: #449801).
+  * Set Standards-Version to 3.7.2 (no changes needed).
+
+  [ Frank Lichtenheld ]
+  * debian/rules: build-stamp should depend on configure-stamp, not build.
+    Fixes build with dpkg-buildpackage -j. Found by Daniel Schepler.
+  * debian/control: Remove superfluous quotes in Maintainer field
+
+  [ Damyan Ivanov ]
+  * Use debhelper compatibility level 5
+    + add debian/compat
+    + remove DH_COMPAT export from debian/rules
+    + adjust build-depends accordingly
+  * debian/rules: cleanup
+    + stop ignoring realclean errors
+    + remove unused debhelper calls
+    + move README from debian/docs to dh_installdocs
+    + use proper DESTDIR and PREFIX when installing
+  * use search.cpan.org/dist/Crypt-DES/ as download location in
+    debian/copyright
+  * add myself to Uploaders
+
+ -- Damyan Ivanov <dmn@debian.org>  Mon, 26 Nov 2007 23:44:31 +0200
+
+libcrypt-des-perl (2.05-1) unstable; urgency=low
+
+  * New upstream release (closes: #344647)
+  * Added me to Uploaders
+  * Standards-Version updated to 3.6.2 with change DH_COMPAT=4
+
+ -- Krzysztof Krzyzaniak (eloy) <eloy@debian.org>  Sat, 24 Dec 2005 20:34:04 +0100
+
+libcrypt-des-perl (2.03-4) unstable; urgency=low
+
+  * Package now maintained by the Debian Perl group.  (Closes:  #313465)
+
+ -- Jaldhar H. Vyas <jaldhar@debian.org>  Wed, 15 Jun 2005 11:30:56 -0400
+
+libcrypt-des-perl (2.03-3) unstable; urgency=low
+
+  * moved out from non-us section
+
+ -- Shell Hung <shell@debian.org>  Fri, 18 Jun 2004 13:54:39 +0800
+
+libcrypt-des-perl (2.03-2) unstable; urgency=low
+
+  * Close bug report. (Closes: #158945)
+  * Add libcrypt-cbc-perl to build-depend
+
+ -- Shell Hung <shell@debian.org>  Wed,  9 Oct 2002 18:04:11 +0800
+
+libcrypt-des-perl (2.03-1.1) unstable; urgency=low
+
+  * NMU for perl 5.8.
+  * Build-depend on perl (>= 5.8.0-7), in order to use perlapi-5.8.0.
+  * Set PREFIX at 'make install' time, not while processing Makefile.PL,
+    otherwise VENDORPREFIX gets set wrongly and the build process ends up
+    trying to write to /usr on the build machine.
+  * 'make realclean' rather than 'clean'.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 31 Aug 2002 01:59:52 +0100
+
+libcrypt-des-perl (2.03-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #118133)
+
+ -- Shell Hung <shell@debian.org>  Sat,  3 Nov 2001 23:41:56 +0800
